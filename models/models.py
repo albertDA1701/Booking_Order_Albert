@@ -3,9 +3,9 @@
 # from odoo import models, fields, api
 
 
-# class booking_order__albertus_da(models.Model):
-#     _name = 'booking_order__albertus_da.booking_order__albertus_da'
-#     _description = 'booking_order__albertus_da.booking_order__albertus_da'
+# class booking_order_albert(models.Model):
+#     _name = 'booking_order_albert.booking_order_albert'
+#     _description = 'booking_order_albert.booking_order_albert'
 
 #     name = fields.Char()
 #     value = fields.Integer()
