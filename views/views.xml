@@ -2,9 +2,9 @@
   <data>
     <!-- explicit list view definition -->
 <!--
-    <record model="ir.ui.view" id="booking_order__albertus_da.list">
-      <field name="name">booking_order_AlbertusDA list</field>
-      <field name="model">booking_order__albertus_da.booking_order__albertus_da</field>
+    <record model="ir.ui.view" id="booking_order_albert.list">
+      <field name="name">booking_order_albert list</field>
+      <field name="model">booking_order_albert.booking_order_albert</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -17,18 +17,18 @@
 
     <!-- actions opening views on models -->
 <!--
-    <record model="ir.actions.act_window" id="booking_order__albertus_da.action_window">
-      <field name="name">booking_order_AlbertusDA window</field>
-      <field name="res_model">booking_order__albertus_da.booking_order__albertus_da</field>
+    <record model="ir.actions.act_window" id="booking_order_albert.action_window">
+      <field name="name">booking_order_albert window</field>
+      <field name="res_model">booking_order_albert.booking_order_albert</field>
       <field name="view_mode">tree,form</field>
     </record>
 -->
 
     <!-- server action to the one above -->
 <!--
-    <record model="ir.actions.server" id="booking_order__albertus_da.action_server">
-      <field name="name">booking_order_AlbertusDA server</field>
-      <field name="model_id" ref="model_booking_order__albertus_da_booking_order__albertus_da"/>
+    <record model="ir.actions.server" id="booking_order_albert.action_server">
+      <field name="name">booking_order_albert server</field>
+      <field name="model_id" ref="model_booking_order_albert_booking_order_albert"/>
       <field name="state">code</field>
       <field name="code">
         action = {
@@ -42,19 +42,19 @@
 
     <!-- Top menu item -->
 <!--
-    <menuitem name="booking_order_AlbertusDA" id="booking_order__albertus_da.menu_root"/>
+    <menuitem name="booking_order_albert" id="booking_order_albert.menu_root"/>
 -->
     <!-- menu categories -->
 <!--
-    <menuitem name="Menu 1" id="booking_order__albertus_da.menu_1" parent="booking_order__albertus_da.menu_root"/>
-    <menuitem name="Menu 2" id="booking_order__albertus_da.menu_2" parent="booking_order__albertus_da.menu_root"/>
+    <menuitem name="Menu 1" id="booking_order_albert.menu_1" parent="booking_order_albert.menu_root"/>
+    <menuitem name="Menu 2" id="booking_order_albert.menu_2" parent="booking_order_albert.menu_root"/>
 -->
     <!-- actions -->
 <!--
-    <menuitem name="List" id="booking_order__albertus_da.menu_1_list" parent="booking_order__albertus_da.menu_1"
-              action="booking_order__albertus_da.action_window"/>
-    <menuitem name="Server to list" id="booking_order__albertus_da" parent="booking_order__albertus_da.menu_2"
-              action="booking_order__albertus_da.action_server"/>
+    <menuitem name="List" id="booking_order_albert.menu_1_list" parent="booking_order_albert.menu_1"
+              action="booking_order_albert.action_window"/>
+    <menuitem name="Server to list" id="booking_order_albert" parent="booking_order_albert.menu_2"
+              action="booking_order_albert.action_server"/>
 -->
   </data>
 </odoo>

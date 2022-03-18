@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <!-- sale.work.order tree view -->
     <record id="sale_work_order_view_tree" model="ir.ui.view">
         <field name="name">Work Order</field>
         <field name="model">sale.work.order</field>
@@ -19,26 +20,34 @@
         </field>
     </record>
 
+    <!-- sale.work.order form view -->
     <record id="sale_work_order_view_form" model="ir.ui.view">
         <field name="name">sale.work.order.view.form</field>
         <field name="model">sale.work.order</field>
         <field name="arch" type="xml">
             <form string="Test">
                 <sheet>
+                    <h1>
+                        <field name="name" />
+                    </h1>
                     <group>
-                        <field name="sale_order_id" />
+                        <field name="sale_order_id" domain="[('is_booking_order', '=', True)]" />
                     </group>
-                    <group string="Service Team">
-                        <field name="team_id" />
-                        <field name="team_leader_id" />
-                        <field name="team_member_ids" />    
+
+                    <group>
+                        <group string="Service Team">
+                            <field name="team_id" />
+                            <field name="team_leader_id" />
+                            <field name="team_member_ids" widget="many2many_tags" />
+                        </group>
+                        <group string="Date and Time">
+                            <field name="planned_start" />
+                            <field name="planned_end" />
+                            <field name="date_start" />
+                            <field name="date_end" />
+                        </group>
                     </group>
-                    <group string="Date and Time">
-                        <field name="planned_start" />
-                        <field name="planned_end" />
-                        <field name="date_start" />
-                        <field name="date_end" />
-                    </group>
+                
                     <group>
                         <field name="notes" />
                     </group>
@@ -47,6 +56,7 @@
         </field>
     </record>
     
+    <!-- sale.work.order action window -->
     <record id="sale_work_order_action" model="ir.actions.act_window">
         <field name="name">Work Order</field>
         <field name="type">ir.actions.act_window</field>
@@ -54,11 +64,7 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem
-        id="working_order_menu_act"
-        name="Work Order"
-        parent="booking_menu_categ"
-        action="sale_work_order_action"
-        sequence="300"/>
+    <!-- This Menu Item must have a parent and a action -->
+    <menuitem id="working_order_menu_act" name="Work Order" parent="booking_menu_categ" action="sale_work_order_action" sequence="30"/>
 
 </odoo>
