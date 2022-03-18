@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "booking_order_AlbertusDA",
+    'name': "booking_order_albert",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -16,15 +16,16 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Sales',
-    'version': '1.0',
+    'category': 'Administration',
+    'version': '0.1',
     'application': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale', 'sale_management'],
+    'depends':  ['base', 'sale', 'sale_management'],
 
     # always loaded
     'data': [
+        # 'security/ir.model.access.csv',
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
